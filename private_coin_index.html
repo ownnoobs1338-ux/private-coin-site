@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Private Coin — Send Your Privates</title>
+  <meta name="description" content="Private Coin — anonymous memecoin. Send your Privates anywhere, anytime." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0a'/><text x='50' y='58' font-size='48' text-anchor='middle' fill='%23a0f'/></svg>">
+  <style>
+    :root{
+      --bg:#030319;
+      --card:#0b0b14;
+      --accent1:#00f0c6;
+      --accent2:#9b6bff;
+      --muted:#9aa0b1;
+      --glass: rgba(255,255,255,0.03);
+      --radius:18px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:radial-gradient(1000px 400px at 10% 10%, rgba(155,107,255,0.08), transparent), radial-gradient(800px 300px at 90% 90%, rgba(0,240,198,0.06), transparent), var(--bg);color:#e6eef8}
+    a{color:var(--accent1);text-decoration:none}
+    .wrap{max-width:1100px;margin:40px auto;padding:28px}
+
+    /* Header / nav */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:62px;height:62px;border-radius:14px;background:linear-gradient(135deg,var(--accent2),var(--accent1));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(0,0,0,0.6);font-weight:800;color:#021}
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.6px}
+    .tagline{font-size:12px;color:var(--muted)}
+    nav a{color:var(--muted);margin-left:18px;font-size:14px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:26px}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:var(--radius);padding:28px;backdrop-filter:blur(6px);box-shadow:0 6px 30px rgba(10,8,18,0.6)}
+    .hero-left h2{margin:0;font-size:40px}
+    .hero-left p.lead{color:var(--muted);margin-top:14px;line-height:1.5}
+    .cta-row{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:12px;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#031014}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Right card */
+    .stats{display:flex;flex-direction:column;gap:12px}
+    .stat{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)}
+    .stat strong{display:block;font-size:18px}
+    .stat span{color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{margin-top:26px}
+    h3{margin:0 0 12px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .code{background:rgba(0,0,0,0.25);padding:14px;border-radius:10px;font-family:monospace;word-break:break-all}
+
+    footer{margin-top:40px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .wrap{margin:18px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">PC</div>
+        <div>
+          <h1>Private Coin</h1>
+          <div class="tagline">Privacy-first memecoin • "Privates" delivered anonymously</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#what">What is Private Coin?</a>
+        <a href="#buy">How to buy</a>
+        <a href="#roadmap">Roadmap</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="panel hero-left">
+          <h2>Send your <span style="color:var(--accent1)">Privates</span> — completely anonymous, instantly.</h2>
+          <p class="lead">Private Coin blends memecoin energy with a privacy-first protocol design. Built for people who value secrecy, speed, and a good laugh.</p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#buy">Buy Private Coin</a>
+            <a class="btn btn-ghost" href="#what">Learn more</a>
+          </div>
+
+          <div style="margin-top:22px;display:flex;gap:12px;align-items:center">
+            <div style="width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg, rgba(155,107,255,0.14), rgba(0,240,198,0.09));display:flex;align-items:center;justify-content:center;font-weight:700">🕶️</div>
+            <div>
+              <div style="font-size:13px;color:var(--muted)">Anonymity-first</div>
+              <div style="font-weight:700">No KYC • No logs • Meme-friendly</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="panel stats">
+          <div class="stat">
+            <strong>Private by design</strong>
+            <span>Focused on anonymous transfers and memetic growth.</span>
+          </div>
+          <div class="stat">
+            <strong id="supply">1,000,000,000</strong>
+            <span>Total supply (placeholder)</span>
+          </div>
+          <div class="stat">
+            <strong>Fair launch</strong>
+            <span>Community-driven. Liquidity on DEX (see how-to-buy).</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- What is Private Coin -->
+      <section id="what" class="panel">
+        <h3>What is Private Coin?</h3>
+        <p>Private Coin is the latest in cutting edge technology. Send your Privates anywhere, anytime, and completely anonymously.</p>
+      </section>
+
+      <!-- How to buy -->
+      <section id="buy" class="panel">
+        <h3>How to buy</h3>
+        <p>To buy Private Coin, use the coin address below in your wallet or follow the pump.fun listing link.</p>
+
+        <div class="grid" style="margin-top:12px">
+          <div>
+            <div class="code" id="address">EpsY3isagvbHcpByHr9fj2QyMeYdbHFfXGRTSSL54jfK</div>
+            <div style="margin-top:10px;display:flex;gap:10px">
+              <button class="btn btn-primary" id="copyBtn">Copy address</button>
+              <a class="btn btn-ghost" href="https://pump.fun/coin/EpsY3isagvbHcpByHr9fj2QyMeYdbHFfXGRTSSL54jfK" target="_blank" rel="noopener">Open pump.fun listing</a>
+            </div>
+            <div style="margin-top:10px;color:var(--muted);font-size:13px">Address can be pasted into a wallet or used on a DEX interface.</div>
+          </div>
+
+          <div>
+            <div style="background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:16px;border-radius:12px">
+              <h4 style="margin:0 0 8px 0">Quick steps</h4>
+              <ol style="margin:0;padding-left:18px;color:var(--muted)">
+                <li>Install a compatible wallet (example: MetaMask, Trust Wallet).</li>
+                <li>Switch network to the chain the token is on (check pump.fun listing).</li>
+                <li>Use the token address above to add/import the token in your wallet or paste it on the DEX swap input.</li>
+                <li>Approve and swap carefully. Double-check the address and slippage.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Roadmap (simple) -->
+      <section id="roadmap" class="panel">
+        <h3>Roadmap</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;margin-top:12px">
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)">
+            <strong>Phase 1 — Launch</strong>
+            <div style="color:var(--muted)">Fair launch, liquidity, listing on pump.fun</div>
+          </div>
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)">
+            <strong>Phase 2 — Community</strong>
+            <div style="color:var(--muted)">Engage on socials, create memes, community voting</div>
+          </div>
+          <div style="padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent)">
+            <strong>Phase 3 — Utility</strong>
+            <div style="color:var(--muted)">Explore privacy tools and smaller technical integrations</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© Private Coin — Built for privacy. Not financial advice.</div>
+      <div style="font-size:13px;color:var(--muted)">Token address: <span style="font-family:monospace">EpsY3isagvbHcpByHr9fj2QyMeYdbHFfXGRTSSL54jfK</span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Copy address button
+    const copyBtn = document.getElementById('copyBtn');
+    const addressEl = document.getElementById('address');
+    copyBtn.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(addressEl.innerText.trim());
+        copyBtn.innerText = 'Copied!';
+        setTimeout(()=> copyBtn.innerText = 'Copy address', 2000);
+      }catch(e){
+        alert('Could not copy automatically — please select and copy the address manually.');
+      }
+    });
+
+    // Simple animated supply number (tasteful)
+    const supply = document.getElementById('supply');
+    let val = 1000000000;
+    setInterval(()=>{
+      // tiny subtle animation
+      const jitter = Math.floor((Math.random()-0.5)*1000);
+      supply.innerText = (val + jitter).toLocaleString();
+    },2000);
+  </script>
+</body>
+</html>
